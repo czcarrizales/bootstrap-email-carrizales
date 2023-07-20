@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    border: 1px solid red;
+}
+
+.col {
+    border: 1px solid blue;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    background-color: blue;
+    color: white;
+}
+
+.nav .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.message {
+    color: gray;
+}
