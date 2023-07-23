@@ -4,13 +4,19 @@ body {
     color: #E6E6E6;
 }
 
-.row {
+.container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.col-md-2, .col-md-4 {
+    padding: 0;
+}
+
+.col-md-8 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1F1D26;
-    border-bottom: 1px solid #44404F;
-    padding: .8rem;
+    justify-content: space-between;
 }
 
 .navbar {
@@ -22,40 +28,51 @@ body {
 
 
 .profile-picture {
-    height: 40px;
-    width: 40px;
-    background-color: white;
-    border-radius: 10px;
-    display: inline-block;
-    text-align: center;
+    width: 50px; /* Set the desired width and height for your circular profile picture */
+    height: 50px;
+    border-radius: 50%; /* This creates the circular shape */
+    overflow: hidden; /* This hides any content outside the circular shape */
+  }
+  
+  .profile-picture img {
+    width: 100%; /* Make sure the image fills the circular container */
+    object-fit: cover; /* Preserve the aspect ratio and crop the image to fit */
+  }
+
+
+.message-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #1F1D26;
+    border-bottom: 1px solid #44404F;
+}
+
+.message-row:hover {
+    background-color: #44404F;
+    cursor: pointer;
 }
 
 .message-text, .message-title, .message-name, .message-favorite, .message-date {
     margin: 0;
     padding: 0;
-    line-height: 1;
     font-size: 14px;
 }
 
 .message-name {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .message-title {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .message-text {
-    font-size: .8rem;
-}
-
-.message-favorite {
-    padding-top: 10px;
+    font-size: 16px;
 }
 
 .message-left {
-    display: flex;
-    justify-content: center;
     padding: 0;
 }
 
@@ -69,3 +86,82 @@ body {
     padding: 0;
     margin: 0;
 }
+
+/* Custom CSS for the sidebar */
+.sidebar {
+    height: 100vh; /* Set the height of the sidebar to cover the full viewport height */
+    width: 250px; /* Set the width of the sidebar */
+    color: #fff; /* Set the text color to white */
+    padding: 0;
+    margin-top: 120px;
+  }
+  
+  .sidebar h2 {
+    text-align: center; /* Center the heading text */
+  }
+  
+  .sidebar ul {
+    list-style: none; /* Remove the default bullet points */
+    padding: 0; /* Remove any default padding */
+  }
+  
+  .sidebar li {
+    height: 80px;
+  }
+  
+  .sidebar li a {
+    color: #fff; /* Set the link color to white */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .sidebar li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+
+  .email-utilities {
+    height: 40px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  li:hover, a:hover {
+    background-color: #44404F;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .current-page {
+    background-color: #44404F;
+  }
+
+  .email-search {
+    height: 80px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  #exampleCheckbox {
+    margin-right: 10px;
+  }
+
+  .desktop-container {
+    margin: 0;
+  }
+
+  .fa-star:hover {
+    color: #D2FC5C;
+    cursor: default;
+  }
