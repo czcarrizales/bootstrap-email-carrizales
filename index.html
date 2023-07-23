@@ -7,120 +7,365 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="row navbar">
-            <div class="col">
-                <p>Ham</p>
+        <nav class="navbar d-lg-none navbar-dark">
+            <div class="row w-100 d-flex align-items-center">
+          
+              <!-- Hamburger button -->
+              <div class="col-3">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+          
+              <!-- Logo in the middle -->
+              <div class="col-6 text-center">
+               <h1>Inbox</h1>
+              </div>
+          
+              <!-- Search icon on the right -->
+              <div class="col-3 d-flex justify-content-end">
+                <i class="fas fa-search"></i>
+              </div>
+          
             </div>
-            <div class="col">
-                <h1>Inbox</h1>
-                <p>24 unread</p>
+          </nav>
+        <div class="row desktop-container">
+            <div class="sidebar col-lg-1 d-none d-lg-block ">
+                <ul>
+                    <li class="current-page"><a href="#">Inbox</a></li>
+                    <li><a href="#">Favorited</a></li>
+                    <li><a href="#">Spam</a></li>
+                    <li><a href="#">Trash</a></li>
+                </ul>
             </div>
-            <div class="col">
-                <p>Search</p>
+            <div class="col-lg-11 desktop-email-container">
+                <div class="row email-search d-lg-flex align-items-center justify-content-center d-none">
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search mail" aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 offset-md-6 d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-gear fa-2x"></i>
+                    </div>
+                    <div class="col-md-1 text-center profile-setting d-flex justify-content-center align-items-center">
+                        <div class="profile-picture">
+                            <img src="jurica-koletic-7YVZYZeITc8-unsplash.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row email-utilities d-none d-lg-flex align-items-center justify-content-center">
+                    <div class="col-md-1 text-center">
+                        <p>Refresh</p>
+                    </div>
+                    <div class="col-md-1 offset-md-10 text-center bf">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="row message-row">
+                    <div class="col-2 col-lg-1 message-left text-center d-none d-lg-block">
+                        <div class="desktop-select-favorite d-flex align-items-center justify-content-center">
+                            <input type="checkbox" id="exampleCheckbox">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-8 col-lg-10">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-lg-2 message-name text-lg-center">
+                                <p class="message-name">Emerson Gouse</p>
+                            </div>
+                            <div class="col-12 col-lg-2 message-title text--lg-center">
+                                <p class="">Subject Title</p>
+                            </div>
+                            <div class="col-12 col-lg-8 message-text">
+                                <p class="">This is the long subject matter...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-lg-1 message-right text-center">
+                        <p class="message-date">March 24</p>
+                    </div>
+                </div>
+                <div class="row message-row">
+                    <div class="col-2 col-lg-1 message-left text-center d-none d-lg-block">
+                        <div class="desktop-select-favorite d-flex align-items-center justify-content-center">
+                            <input type="checkbox" id="exampleCheckbox">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-8 col-lg-10">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-lg-2 message-name text-lg-center">
+                                <p class="message-name">Emerson Gouse</p>
+                            </div>
+                            <div class="col-12 col-lg-2 message-title text--lg-center">
+                                <p class="">Subject Title</p>
+                            </div>
+                            <div class="col-12 col-lg-8 message-text">
+                                <p class="">This is the long subject matter...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-lg-1 message-right text-center">
+                        <p class="message-date">March 24</p>
+                    </div>
+                </div>
+                <div class="row message-row">
+                    <div class="col-2 col-lg-1 message-left text-center d-none d-lg-block">
+                        <div class="desktop-select-favorite d-flex align-items-center justify-content-center">
+                            <input type="checkbox" id="exampleCheckbox">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-8 col-lg-10">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-lg-2 message-name text-lg-center">
+                                <p class="message-name">Emerson Gouse</p>
+                            </div>
+                            <div class="col-12 col-lg-2 message-title text--lg-center">
+                                <p class="">Subject Title</p>
+                            </div>
+                            <div class="col-12 col-lg-8 message-text">
+                                <p class="">This is the long subject matter...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-lg-1 message-right text-center">
+                        <p class="message-date">March 24</p>
+                    </div>
+                </div>
+                <div class="row message-row">
+                    <div class="col-2 col-lg-1 message-left text-center d-none d-lg-block">
+                        <div class="desktop-select-favorite d-flex align-items-center justify-content-center">
+                            <input type="checkbox" id="exampleCheckbox">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-8 col-lg-10">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-lg-2 message-name text-lg-center">
+                                <p class="message-name">Emerson Gouse</p>
+                            </div>
+                            <div class="col-12 col-lg-2 message-title text--lg-center">
+                                <p class="">Subject Title</p>
+                            </div>
+                            <div class="col-12 col-lg-8 message-text">
+                                <p class="">This is the long subject matter...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-lg-1 message-right text-center">
+                        <p class="message-date">March 24</p>
+                    </div>
+                </div>
+                <div class="row message-row">
+                    <div class="col-2 col-lg-1 message-left text-center d-none d-lg-block">
+                        <div class="desktop-select-favorite d-flex align-items-center justify-content-center">
+                            <input type="checkbox" id="exampleCheckbox">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-8 col-lg-10">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-lg-2 message-name text-lg-center">
+                                <p class="message-name">Emerson Gouse</p>
+                            </div>
+                            <div class="col-12 col-lg-2 message-title text--lg-center">
+                                <p class="">Subject Title</p>
+                            </div>
+                            <div class="col-12 col-lg-8 message-text">
+                                <p class="">This is the long subject matter...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-lg-1 message-right text-center">
+                        <p class="message-date">March 24</p>
+                    </div>
+                </div>
+                <div class="row message-row">
+                    <div class="col-2 col-lg-1 message-left text-center d-none d-lg-block">
+                        <div class="desktop-select-favorite d-flex align-items-center justify-content-center">
+                            <input type="checkbox" id="exampleCheckbox">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-8 col-lg-10">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-lg-2 message-name text-lg-center">
+                                <p class="message-name">Emerson Gouse</p>
+                            </div>
+                            <div class="col-12 col-lg-2 message-title text--lg-center">
+                                <p class="">Subject Title</p>
+                            </div>
+                            <div class="col-12 col-lg-8 message-text">
+                                <p class="">This is the long subject matter...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-lg-1 message-right text-center">
+                        <p class="message-date">March 24</p>
+                    </div>
+                </div>
+                <div class="row message-row">
+                    <div class="col-2 col-lg-1 message-left text-center d-none d-lg-block">
+                        <div class="desktop-select-favorite d-flex align-items-center justify-content-center">
+                            <input type="checkbox" id="exampleCheckbox">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-8 col-lg-10">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-lg-2 message-name text-lg-center">
+                                <p class="message-name">Emerson Gouse</p>
+                            </div>
+                            <div class="col-12 col-lg-2 message-title text--lg-center">
+                                <p class="">Subject Title</p>
+                            </div>
+                            <div class="col-12 col-lg-8 message-text">
+                                <p class="">This is the long subject matter...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-lg-1 message-right text-center">
+                        <p class="message-date">March 24</p>
+                    </div>
+                </div>
+                <div class="row message-row">
+                    <div class="col-2 col-lg-1 message-left text-center d-none d-lg-block">
+                        <div class="desktop-select-favorite d-flex align-items-center justify-content-center">
+                            <input type="checkbox" id="exampleCheckbox">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-8 col-lg-10">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-lg-2 message-name text-lg-center">
+                                <p class="message-name">Emerson Gouse</p>
+                            </div>
+                            <div class="col-12 col-lg-2 message-title text--lg-center">
+                                <p class="">Subject Title</p>
+                            </div>
+                            <div class="col-12 col-lg-8 message-text">
+                                <p class="">This is the long subject matter...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-lg-1 message-right text-center">
+                        <p class="message-date">March 24</p>
+                    </div>
+                </div>
+                <div class="row message-row">
+                    <div class="col-2 col-lg-1 message-left text-center d-none d-lg-block">
+                        <div class="desktop-select-favorite d-flex align-items-center justify-content-center">
+                            <input type="checkbox" id="exampleCheckbox">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-8 col-lg-10">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-lg-2 message-name text-lg-center">
+                                <p class="message-name">Emerson Gouse</p>
+                            </div>
+                            <div class="col-12 col-lg-2 message-title text--lg-center">
+                                <p class="">Subject Title</p>
+                            </div>
+                            <div class="col-12 col-lg-8 message-text">
+                                <p class="">This is the long subject matter...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-lg-1 message-right text-center">
+                        <p class="message-date">March 24</p>
+                    </div>
+                </div>
+                <div class="row message-row">
+                    <div class="col-2 col-lg-1 message-left text-center d-none d-lg-block">
+                        <div class="desktop-select-favorite d-flex align-items-center justify-content-center">
+                            <input type="checkbox" id="exampleCheckbox">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-8 col-lg-10">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-lg-2 message-name text-lg-center">
+                                <p class="message-name">Emerson Gouse</p>
+                            </div>
+                            <div class="col-12 col-lg-2 message-title text--lg-center">
+                                <p class="">Subject Title</p>
+                            </div>
+                            <div class="col-12 col-lg-8 message-text">
+                                <p class="">This is the long subject matter...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-lg-1 message-right text-center">
+                        <p class="message-date">March 24</p>
+                    </div>
+                </div>
+                <div class="row message-row">
+                    <div class="col-2 col-lg-1 message-left text-center d-none d-lg-block">
+                        <div class="desktop-select-favorite d-flex align-items-center justify-content-center">
+                            <input type="checkbox" id="exampleCheckbox">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-8 col-lg-10">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-lg-2 message-name text-lg-center">
+                                <p class="message-name">Emerson Gouse</p>
+                            </div>
+                            <div class="col-12 col-lg-2 message-title text--lg-center">
+                                <p class="">Subject Title</p>
+                            </div>
+                            <div class="col-12 col-lg-8 message-text">
+                                <p class="">This is the long subject matter...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-lg-1 message-right text-center">
+                        <p class="message-date">March 24</p>
+                    </div>
+                </div>
+                <div class="row message-row">
+                    <div class="col-2 col-lg-1 message-left text-center d-none d-lg-block">
+                        <div class="desktop-select-favorite d-flex align-items-center justify-content-center">
+                            <input type="checkbox" id="exampleCheckbox">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="col-8 col-lg-10">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-lg-2 message-name text-lg-center">
+                                <p class="message-name">Emerson Gouse</p>
+                            </div>
+                            <div class="col-12 col-lg-2 message-title text--lg-center">
+                                <p class="">Subject Title</p>
+                            </div>
+                            <div class="col-12 col-lg-8 message-text">
+                                <p class="">This is the long subject matter...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-lg-1 message-right text-center">
+                        <p class="message-date">March 24</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-2 message-left">
-                <span class="profile-picture"></span>
-            </div>
-            <div class="col-8 message-middle">
-                <p class="message-name">Emerson Gouse</p>
-                <p class="message-title">Subject Title</p>
-                <p class="message-text">This is the long subject matter where I...</p>
-            </div>
-            <div class="col-2 message-right">
-                <p class="message-date">March 2</p>
-                <p class="message-favorite">Star</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2 message-left">
-                <span class="profile-picture"></span>
-            </div>
-            <div class="col-8 message-middle">
-                <p class="message-name">Emerson Gouse</p>
-                <p class="message-title">Subject Title</p>
-                <p class="message-text">This is the long subject matter where I...</p>
-            </div>
-            <div class="col-2 message-right">
-                <p class="message-date">March 2</p>
-                <p class="message-favorite">Star</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2 message-left">
-                <span class="profile-picture"></span>
-            </div>
-            <div class="col-8 message-middle">
-                <p class="message-name">Emerson Gouse</p>
-                <p class="message-title">Subject Title</p>
-                <p class="message-text">This is the long subject matter where I...</p>
-            </div>
-            <div class="col-2 message-right">
-                <p class="message-date">March 2</p>
-                <p class="message-favorite">Star</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2 message-left">
-                <span class="profile-picture"></span>
-            </div>
-            <div class="col-8 message-middle">
-                <p class="message-name">Emerson Gouse</p>
-                <p class="message-title">Subject Title</p>
-                <p class="message-text">This is the long subject matter where I...</p>
-            </div>
-            <div class="col-2 message-right">
-                <p class="message-date">March 2</p>
-                <p class="message-favorite">Star</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2 message-left">
-                <span class="profile-picture"></span>
-            </div>
-            <div class="col-8 message-middle">
-                <p class="message-name">Emerson Gouse</p>
-                <p class="message-title">Subject Title</p>
-                <p class="message-text">This is the long subject matter where I...</p>
-            </div>
-            <div class="col-2 message-right">
-                <p class="message-date">March 2</p>
-                <p class="message-favorite">Star</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2 message-left">
-                <span class="profile-picture"></span>
-            </div>
-            <div class="col-8 message-middle">
-                <p class="message-name">Emerson Gouse</p>
-                <p class="message-title">Subject Title</p>
-                <p class="message-text">This is the long subject matter where I...</p>
-            </div>
-            <div class="col-2 message-right">
-                <p class="message-date">March 2</p>
-                <p class="message-favorite">Star</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2 message-left">
-                <span class="profile-picture"></span>
-            </div>
-            <div class="col-8 message-middle">
-                <p class="message-name">Emerson Gouse</p>
-                <p class="message-title">Subject Title</p>
-                <p class="message-text">This is the long subject matter where I...</p>
-            </div>
-            <div class="col-2 message-right">
-                <p class="message-date">March 2</p>
-                <p class="message-favorite">Star</p>
-            </div>
-        </div>
+
+
+
     </div>
 </body>
 
